@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Event Summaary Dom</title>
 </head>
 <body>
-    
+    <h1>Final Evnet Dom Handaler</h1>
+
+    <h3 id="handle-status">Defult Text</h3>
+
+    <button onclick="handleOnClick()">Handle Evenet By Add Onclick Function</button>
+
+    <button  id="event-listner">Handle Event By Evenetlistener</button>
+
+
+
+    <script>
+        // Option 1
+        function handleOnClick() {
+            const handleStatus = document.getElementById('handle-status');
+            handleStatus.textContent= 'Handle by Function  attached on onclick attribute';
+        }
+
+        // Option 2
+
+        document.getElementById('event-listner').addEventListener('click', function () {
+            const handleStatus = document.getElementById('handle-status');
+            handleStatus.innerText = 'Text Update By Add Evenet Listner';
+        })
+    </script>
 </body>
 </html>

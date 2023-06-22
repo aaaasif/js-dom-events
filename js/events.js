@@ -19,3 +19,9 @@ const purpleButton = document.getElementById('make-purple');
         }
 
 // option 5
+
+const orangeButton = document.getElementById('make-orange');
+orangeButton.addEventListener('click', makeOrange);
+function makeOrange () {
+    document.body.style.backgroundColor = 'orange';
+}
