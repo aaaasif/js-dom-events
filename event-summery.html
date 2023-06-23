@@ -10,6 +10,12 @@
 
     <h3 id="handle-status">Defult Text</h3>
 
+    <p id="input-field-display">Defult Input text</p>
+    <input id="input-field" type="text">
+    <button id="btn-update">Update</button>
+    <br>
+    <br>
+
     <button onclick="handleOnClick()">Handle Evenet By Add Onclick Function</button>
 
     <button  id="event-listner">Handle Event By Evenetlistener</button>
@@ -29,6 +35,18 @@
             const handleStatus = document.getElementById('handle-status');
             handleStatus.innerText = 'Text Update By Add Evenet Listner';
         })
+
+        // Option 3
+        document.getElementById('btn-update').addEventListener('click', function () {
+            const inputField = document.getElementById('input-field');
+            // in Input to catch input text you need to use Value attribute
+            const inputText = inputField.value;
+            console.log(inputText);
+
+            const p = document.getElementById('input-field-display');
+            p.innerText = inputText;
+            inputField.value = '';
+        });
     </script>
 </body>
 </html>
